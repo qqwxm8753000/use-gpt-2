@@ -9,11 +9,11 @@ def train_model(input_file, epochs):
         text = f.read()
 
     # Tokenize input data
-    tokenizer = AutoTokenizer.from_pretrained('gpt2')
+    tokenizer = AutoTokenizer.from_pretrained('hfl/chinese-gpt2')
     inputs = tokenizer(text, return_tensors='tf', max_length=1024, truncation=True)
 
     # Configure model
-    model = TFGPT2LMHeadModel.from_pretrained('gpt2')
+    model = TFGPT2LMHeadModel.from_pretrained('hfl/chinese-gpt2')
 
     # Train model
     optimizer = tf.keras.optimizers.Adam(learning_rate=5e-5)
