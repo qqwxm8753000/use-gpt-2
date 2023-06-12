@@ -31,7 +31,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     # Load tokenizer and model
-    tokenizer = AutoTokenizer.from_pretrained(args.model_dir)
+    tokenizer = AutoTokenizer.from_pretrained('hfl/chinese-gpt2')
     model = TFGPT2LMHeadModel.from_pretrained(args.model_dir)
 
     # Generate text
