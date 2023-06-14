@@ -24,7 +24,7 @@ jobs:
 
       - name: Train model
         run: |
-          python train.py --input-file input.txt --epochs 2
+          python train.py --input-file input.txt --epochs 2 --use-cpu
 
       - name: Generate text
         id: generate-text
